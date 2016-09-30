@@ -19,8 +19,6 @@ def main():
       if i % 10 == 0:
         print 'processing row %d...' % i
         time.sleep(1)
-      if i < 45:
-        continue
       # longitude is before latitude in row.
       params = {"key": key, "locations": "%s,%s" % (row[1], row[0])}
       r = requests.get(BASE_URL, params=params)
